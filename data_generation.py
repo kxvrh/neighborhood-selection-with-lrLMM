@@ -24,7 +24,8 @@ def is_pos_def(x):
     # return np.all(np.linalg.eigvals(x) > 0)
 
 def increaseCount(count):
-    return count/2.0
+    #return count/2.0
+    return count*2.0
 
 def fillPrecisionMatrix_StarNetwork(P, k):
     [p, p] = P.shape
