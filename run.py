@@ -91,7 +91,7 @@ G.add_edges_from(edge)
 #validation
 tp = fn = fp = tn = 0
 
-P = np.genfromtxt('month_precision.csv')
+P = np.genfromtxt('precision.csv')
 #print(P.shape)
 for i in range(features):
     for j in range(features):
