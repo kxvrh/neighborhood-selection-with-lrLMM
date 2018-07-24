@@ -143,7 +143,7 @@ def dataGeneration(seed, n=500, p=1000, num_cluster=5, k=10,  visualFlag=True, q
 
         x = []
         for t in range(1, int(s+1)):
-            tmpx = np.random.multivariate_normal(np.random.normal(size=p), C, size=1).reshape([p])
+            tmpx = np.random.multivariate_normal(np.random.normal(size=p)*t, C, size=1).reshape([p])
             x.append(tmpx)
         x = np.array(x)
 
@@ -179,8 +179,7 @@ if __name__ == '__main__':
             if(Ps[0, i, j] != 0):
                 Ps[0, i, j] = 1
     #print(Ps[0])
-    np.savetxt('C:/Users/Surface/Desktop/学习/preparation/第一次项目/code/lrLMM/month_sample.csv', X, delimiter = ',')
-    np.savetxt('C:/Users/Surface/Desktop/学习/preparation/第一次项目/code/lrLMM/month_precision.csv', Ps[0])
+   
     # plt.imshow(X)
     # plt.show()
     # from sklearn.cluster import KMeans
